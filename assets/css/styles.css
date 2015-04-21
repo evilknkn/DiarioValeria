@@ -1,0 +1,28 @@
+.titulo
+{
+	font-family: 'Great Vibes', serif;
+    font-size: 60px;
+    color:#fff;
+}
+a.title:link {
+    text-decoration: none;
+    color: #fff;
+}
+
+/* visited link */
+a.title:visited {
+    text-decoration: none;
+    color: #fff;
+}
+
+/* mouse over link */
+a.title:hover {
+    text-decoration: none;
+    color: #fff;
+}
+
+/* selected link */
+a.title:active {
+    text-decoration: none;
+    color: #fff;
+}
