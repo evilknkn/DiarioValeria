@@ -15,16 +15,22 @@
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
                 <li>
-                    <a href="index.html">Inicio</a>
+                    <a href="<?php echo base_url()?>">Inicio</a>
                 </li>
                 <li>
-                    <a href="about.html">Calendario</a>
+                    <a href="<?php echo base_url()?>calendario">Calendario</a>
                 </li>
                 <li>
-                    <a href="blog.html">Blog</a>
+                    <a href="<?php echo base_url()?>blog">Blog</a>
                 </li>
                 <li>
-                    <a href="contact.html">Contactame</a>
+                    <a href="<?php echo base_url()?>contacto">Contactame</a>
+                </li>
+                <li>
+                    <a href="https://twitter.com/Valeria_Martell"  target="_blank"><i class="fa fa-twitter fa-lg"></i> </a>
+                </li>
+                <li>
+                     <a href="https://instagram.com/VALERIA_MARTELL"  target="_blank"><i class="fa fa-instagram fa-lg"></i></a>
                 </li>
             </ul>
         </div>
