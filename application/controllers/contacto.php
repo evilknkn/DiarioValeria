@@ -3,6 +3,7 @@ class Contacto extends CI_Controller
 {	
 	public function index()
 	{	
+        $this->load->model('Page_model');
 		$this->form_validation->set_rules('nombre', ' nombre', 'required');
         $this->form_validation->set_rules('email', 'email', 'required');
         $this->form_validation->set_rules('telephone', 'teléfono', 'required');
@@ -14,7 +15,13 @@ class Contacto extends CI_Controller
 	        $elements['telefono']   = $this->input->post('telephone');
 	        $elements['mensaje']    = $this->input->post('message');
 	        
-            $mail = $this->load->view('message_email', $elements, TRUE);
+            $array_params = array('nombre'          => $this->input->post('nombre'),
+                                    'email'         => $this->input->post('email')  ,
+                                    'telefono'      => $this->input->post('telephone'),
+                                    'mensaje'       => $this->input->post('message') );
+
+            $this->Page_model->insert('diario_contacto', $array_params);
+           /* $mail = $this->load->view('message_email', $elements, TRUE);
            // $this->load->view('message_email', $elements);
             $this->load->library('email');
 
@@ -28,7 +35,9 @@ class Contacto extends CI_Controller
 
             if(! $this->email->send()) {
             //Se registra el error en el log de sistema
-            }
+            }*/
+
+
 
             $this->session->set_flashdata('success', 'Tu información se ha enviado, pronto te contactare.');
             redirect(base_url('contacto'));	
@@ -37,5 +46,12 @@ class Contacto extends CI_Controller
 			$this->load->view('app', $data);
 		endif;
 	}	
+
+    public function genera_slug()
+    {
+        $this->load->helper('funciones_externas');
+        $cadena = genera_slug('El MAÑANERO');
+        echo $cadena;
+    }
 
 }
