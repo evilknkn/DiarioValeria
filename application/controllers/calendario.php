@@ -1,9 +1,9 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
-class Contacto extends CI_Controller
+class Calendario extends CI_Controller
 {	
 	public function index()
 	{
-		$data['body'] = 'page/contacto';
+		$data['body'] = 'page/calendario';
 		$this->load->view('app', $data);
 	}
 }

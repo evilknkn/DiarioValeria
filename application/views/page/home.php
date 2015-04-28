@@ -88,20 +88,23 @@
         <div class="col-lg-12">
             <hr>
             <h2 class="intro-text text-center">
-                <strong>SEXO ANAL, DURO Y FUERTE </strong>
+                <strong>Conoce un poco más de mi </strong>
             </h2>
             <hr>
         </div>
-        <div class="col-lg-12 text-center">
+        <div class="col-lg-2"></div>
+        <div class="col-lg-8 text-center">
             <img class="img-responsive img-border img-full" src="https://lh6.googleusercontent.com/--4lG_72xF4M/Uu1tB6UF8aI/AAAAAAAACWw/h6Uw2W9Pe5g/s640/blogger-image--1196588109.jpg" alt="">
-            <h2>Post Title
+            <h2>SEXO ANAL, DURO Y FUERTE
                 <br>
-                <small>October 13, 2013</small>
+                <small>Abril, 2013</small>
             </h2>
-            <p>Lid est laborum dolo rumes fugats untras. Etharums ser quidem rerum facilis dolores nemis omnis fugats vitaes nemo minima rerums unsers sadips amets. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
-            <a href="#" class="btn btn-default btn-lg">Read More</a>
+            <p>Nos pusimos de acuerdo desde temprano que nos veríamos 
+                a eso de las 2:00 pm en el Hotel Pasadena. La habitación fue la 507. </p>
+            <a href="#" class="btn btn-default btn-lg">Leer más</a>
             <hr>
         </div>
+        <div class="col-lg-2"></div>
     </div>
 
 </div>
