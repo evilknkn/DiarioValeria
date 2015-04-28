@@ -32,8 +32,8 @@ class CI_Email {
 	var	$mailpath		= "/usr/sbin/sendmail";	// Sendmail path
 	var	$protocol		= "smtp";	// mail/sendmail/smtp
 	var	$smtp_host		= "smtp.gmail.com";		// SMTP Server.  Example: mail.earthlink.net
-	var	$smtp_user		= "pct.guanajuato@gmail.com";		// SMTP Username
-	var	$smtp_pass		= "BrachiumMX_1320";		// SMTP Password
+	var	$smtp_user		= "contacto.valeriamartell@gmail.com";		// SMTP Username
+	var	$smtp_pass		= "diarioEroticoValeria2015";		// SMTP Password
 	//var	$smtp_user		= "competitividadturistica@guanajuato.gob.mx";		// SMTP Username
 	//var	$smtp_pass		= "competitividad123";		// SMTP Password
 	var	$smtp_port		= "587";		// SMTP Port

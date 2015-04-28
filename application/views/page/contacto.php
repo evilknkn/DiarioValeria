@@ -1,9 +1,61 @@
 <div class="row">
+    <div class="box">
+        <div class="col-lg-12">
+            <div class="col-lg-12">
+                <hr>
+                <h2 class="intro-text text-center">Contacto
+                    <strong>Valeria Martell</strong>
+                </h2>
+                <hr>
+            </div>
+            <?php if($this->session->flashdata('success')):?>
+                <div class="text-center col-sm-12 ">
+                    <div class="alert alert-success text-success text-center"> <?php echo $this->session->flashdata('success');?></div>
+                </div>
+            <?php endif;?>
+            <p>Por favor dejame tus datos y me pondré en contacto contigo a la brevedad.</p>
+            <p><b>Nota:</b> En el contenido deja el horario en el que te puedo contactar, esto con el fin de tener completa discreción.</p>
+           
+
+            <form role="form" method="post" >
+                <div class="row">
+                    <div class="form-group col-lg-4">
+                        <label>Nombre</label>
+                        <input type="text" class="form-control" name="nombre">
+                        <?=form_error('nombre')?>                        
+                    </div>
+                    <div class="form-group col-lg-4">
+                        <label>Email</label>
+                        <input type="email" class="form-control" name="email">
+                        <?=form_error('nombre')?>  
+                    </div>
+                    <div class="form-group col-lg-4">
+                        <label>Teléfono</label>
+                        <input type="tel" class="form-control" name="telephone">
+                        <?=form_error('nombre')?>  
+                    </div>
+                    <div class="clearfix"></div>
+                    <div class="form-group col-lg-12">
+                        <label>Mensaje</label>
+                        <textarea class="form-control" rows="6" name="message"></textarea>
+                        <?=form_error('nombre')?>  
+                    </div>
+                    <div class="form-group col-lg-12">
+                        <input type="hidden" name="save" value="contact">
+                        <button type="submit" class="btn btn-default">Enviar</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+        <div class="row">
             <div class="box">
                 <div class="col-lg-12">
                     <hr>
-                    <h2 class="intro-text text-center">Contacto
-                        <strong>Valeria Martell</strong>
+                    <h2 class="intro-text text-center">Hoteles
+                        
                     </h2>
                     <hr>
                 </div>
@@ -22,42 +74,5 @@
                     </p>
                 </div>
                 <div class="clearfix"></div>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="box">
-                <div class="col-lg-12">
-                    <hr>
-                    <h2 class="intro-text text-center">Contacto
-                    </h2>
-                    <hr>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat, vitae, distinctio, possimus repudiandae cupiditate ipsum excepturi dicta neque eaque voluptates tempora veniam esse earum sapiente optio deleniti consequuntur eos voluptatem.</p>
-                    <form role="form">
-                        <div class="row">
-                            <div class="form-group col-lg-4">
-                                <label>Nombre</label>
-                                <input type="text" class="form-control">
-                            </div>
-                            <div class="form-group col-lg-4">
-                                <label>Email</label>
-                                <input type="email" class="form-control">
-                            </div>
-                            <div class="form-group col-lg-4">
-                                <label>Teléfono</label>
-                                <input type="tel" class="form-control">
-                            </div>
-                            <div class="clearfix"></div>
-                            <div class="form-group col-lg-12">
-                                <label>Mensaje</label>
-                                <textarea class="form-control" rows="6"></textarea>
-                            </div>
-                            <div class="form-group col-lg-12">
-                                <input type="hidden" name="save" value="contact">
-                                <button type="submit" class="btn btn-default">Enviar</button>
-                            </div>
-                        </div>
-                    </form>
-                </div>
             </div>
         </div>
