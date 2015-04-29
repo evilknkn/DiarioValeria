@@ -92,16 +92,14 @@
             </h2>
             <hr>
         </div>
-        <div class="col-lg-2"></div>
-        <div class="col-lg-8 text-center">
-            <img class="img-responsive img-border img-full" src="https://lh6.googleusercontent.com/--4lG_72xF4M/Uu1tB6UF8aI/AAAAAAAACWw/h6Uw2W9Pe5g/s640/blogger-image--1196588109.jpg" alt="">
-            <h2>SEXO ANAL, DURO Y FUERTE
+        <div class="col-lg-8 col-lg-offset-2 text-center">
+            <img class="img-responsive img-border img-full" src="<?php echo base_url('/assets/blog/'.$post_recent->img_post)?>" alt="<?php echo $post_recent->titulo;?>">
+            <h2><?php echo $post_recent->titulo;?>
                 <br>
-                <small>Abril, 2013</small>
+                <small><?php echo formato_fecha_ddmmaaaa($post_recent->fecha_reg)?></small>
             </h2>
-            <p>Nos pusimos de acuerdo desde temprano que nos veríamos 
-                a eso de las 2:00 pm en el Hotel Pasadena. La habitación fue la 507. </p>
-            <a href="#" class="btn btn-default btn-lg">Leer más</a>
+            <p class="text-left"><?php echo substr($post_recent->contenido, 0, 405) ?> ...</p>
+            <a href="<?php echo base_url('/blog/post/'.$post_recent->short_title)?>" class="btn btn-default btn-lg">Leer más</a>
             <hr>
         </div>
         <div class="col-lg-2"></div>

@@ -5,4 +5,32 @@ class Page_model extends CI_Model
 	{
 		$this->db->insert($tabla, $params);
 	}
+
+	public function recent_post()
+	{
+		$this->db->from('diario_blog');
+		$this->db->order_by('id_post','desc');
+		$this->db->limit(1);
+		$query = $this->db->get();
+		return $query->row();
+	}
+
+	public function recent_post_five()
+	{	
+		$this->db->select('id_post, titulo, short_title');
+		$this->db->from('diario_blog');
+		$this->db->order_by('id_post','desc');
+		$this->db->limit(5);
+		$query = $this->db->get();
+		return $query->result();
+	}
+
+	public function indice_post()
+	{
+		$this->db->from('diario_blog');
+		$this->db->order_by('id_post','desc');
+		$this->db->limit(10);
+		$query = $this->db->get();
+		return $query->result();
+	}
 }
