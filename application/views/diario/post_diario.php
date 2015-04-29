@@ -1,33 +1,88 @@
-<div class="container blog">
-	<div class="row blog-post">
-        <div class="col-md-8 col-sm-8" style="margin-bottom:10px;">
-        <div>
-            <a href="http://aventuraapps.com/blog/nota/lo-que-perdemos-usando-metricas-financieras-tradicionales-al-evaluar-proyectos-de-innovacion">
-                <img src="http://aventuraapps.com/assets/blog/o_loosing_money.jpg" alt="preview" class="img-responsive img-polaroid" style="width:100%">
-            </a>
-        </div>	
-             <h4><a class="post-title" href="http://aventuraapps.com/blog/nota/lo-que-perdemos-usando-metricas-financieras-tradicionales-al-evaluar-proyectos-de-innovacion">Lo Que Perdemos Usando Métricas Financieras Tradicionales Al Evaluar Proyectos De Innovación</a> </h4>
-        </div>
-        <div class="col-md-8" style="margin-bottom:15px;">
-            <div class="tags tags-blog">
-                <hr>
+<div class="row">
+    <div class="col-lg-8">
+        <div class="box">
+            <div class="col-lg-10 col-lg-offset-1 text-center">
+                <img class="img-responsive img-border img-full" src="<?echo base_url('/assets/blog/'.$post->img_post)?>" alt="">
+                <h2><?php echo $post->titulo;?>
+                    <br>
+                    <small><?php echo formato_fecha_ddmmaaaa($post->fecha_reg)?></small>
+                </h2>
+
                 <div class="row">
-                    <div class="col-md-6 col-sm-6 col-xs-12">
-                         <p><span class="color-font"><i class="fa fa-clock-o"></i></span> 02/03/2015</p>
+                    <div class="col-lg-3">
+                        <h3 style="line-height:0.1">Comparte</h3>
                     </div>
-                    <div class="col-md-6 col-sm-6 col-xs-12">
-                        <p><span class="color-font"><i class="fa fa-tag"></i></span> métricas, proyectos, finanzas</p>
+
+                    <div class="col-lg-1 col-lg-offset-1 hidden-xs hidden-sm ">
+                        <a class="btn btn-social-icon btn-twitter" href="http://twitter.com/home?status=<?=urlencode($post->titulo.' '.base_url('blog/post/'.$post->short_title))?>" >
+                            <i class="fa fa-twitter"></i>
+                        </a>
                     </div>
+
+                    <div class="col-lg-1 hidden-xs hidden-sm">
+                        <a class="btn btn-social-icon btn-facebook" href="http://www.facebook.com/sharer.php?u=<?=urlencode(base_url('blog/post/'.$post->short_title))?>">
+                            <i class="fa fa-facebook"></i>
+                        </a> 
+                    </div>
+
+                    <div class="col-xs-12 text-center hidden-md hidden-lg">
+                        <a class="btn btn-social-icon btn-twitter" href="http://twitter.com/home?status=<?=urlencode($post->titulo.' '.base_url('blog/post/'.$post->short_title))?>" >
+                            <i class="fa fa-twitter"></i>
+                        </a>
+
+                        <a class="btn btn-social-icon btn-facebook" href="http://www.facebook.com/sharer.php?u=<?=urlencode(base_url('blog/post/'.$post->short_title))?>">
+                            <i class="fa fa-facebook"></i>
+                        </a> 
+                    </div>
+
                 </div>
+                <br>
+                <br>
+                <div class="text-left" style="margin-bottom:20px;"><?php echo $post->contenido ?></div>
+                    
+                <div class="row">
+                    <div class="col-lg-3">
+                        <h3 style="line-height:0.1">Comparte</h3>
+                    </div>
+
+                    <div class="col-lg-1 col-lg-offset-1 hidden-xs hidden-sm ">
+                        <a class="btn btn-social-icon btn-twitter" href="http://twitter.com/home?status=<?=urlencode($post->titulo.' '.base_url('blog/post/'.$post->short_title))?>" >
+                            <i class="fa fa-twitter"></i>
+                        </a>
+                    </div>
+
+                    <div class="col-lg-1 hidden-xs hidden-sm">
+                        <a class="btn btn-social-icon btn-facebook" href="http://www.facebook.com/sharer.php?u=<?=urlencode(base_url('blog/post/'.$post->short_title))?>">
+                            <i class="fa fa-facebook"></i>
+                        </a> 
+                    </div>
+
+                    <div class="col-xs-12 text-center hidden-md hidden-lg">
+                        <a class="btn btn-social-icon btn-twitter" href="http://twitter.com/home?status=<?=urlencode($post->titulo.' '.base_url('blog/post/'.$post->short_title))?>" >
+                            <i class="fa fa-twitter"></i>
+                        </a>
+
+                        <a class="btn btn-social-icon btn-facebook" href="http://www.facebook.com/sharer.php?u=<?=urlencode(base_url('blog/post/'.$post->short_title))?>">
+                            <i class="fa fa-facebook"></i>
+                        </a> 
+                    </div>
+
+                </div>
+                                   
                 <hr>
+
+                <div class="row">
+                    <a href="<?php echo base_url('/blog')?>" class="btn btn-default">Regresar a entradas</a>
+                </div>
             </div>
-        </div>
-        <div class="col-md-8">
-            <p>Muchas veces, la renuencia a invertir en proyectos de innovaci&oacute;n se sustenta en la buena salud de las finanzas de nuestra organizaci&oacute;n en un momento determinado, a partir de la cual se hacen estimaciones num&eacute;ricas en apariencia s&oacute;lidas. Sin embargo, debido a la velocidad con la que los mercados y tecnolog&iacute;as cambian, el no contar con innovaci&oacute;n puede evitar ...
-            <br />
-            <div>
-                <a href="http://aventuraapps.com/blog/nota/lo-que-perdemos-usando-metricas-financieras-tradicionales-al-evaluar-proyectos-de-innovacion" class="btn btn-default btn-small read-more">Continuar leyendo</a>
-            </div>
+                
+        </div>   
+    </div>
+
+    <!-- Lista de 5 recientes-->    
+    <div class="col-lg-4">
+        <div class="box">
+            <?php echo $this->load->view('diario/top_five_recents')?>
         </div>
     </div>
 </div>

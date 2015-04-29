@@ -33,4 +33,12 @@ class Page_model extends CI_Model
 		$query = $this->db->get();
 		return $query->result();
 	}
+
+	public function read_post($table, $params)
+	{
+		$this->db->from($table);
+		$this->db->where($params);
+		$query = $this->db->get();
+		return $query->row();
+	}
 }

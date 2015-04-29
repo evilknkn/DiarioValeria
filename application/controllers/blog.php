@@ -19,11 +19,14 @@ class Blog extends CI_Controller
 		$this->load->model('Page_model');
 		$this->load->helper('funciones_externas');
 
-		$params = array('short_ulr' => $post);
+		$params = array('short_title' => $post);
 		$table 	= 'diario_blog';
+		
+		$data['five_recent'] = $this->Page_model->recent_post_five();
+		$data['post'] = $this->Page_model->read_post($table, $params);
 
-		$data['post'] = $this->Page_model->indice_post($tabla, $params);
+		$data['body'] = 'diario/post_diario';
+		$this->load->view('app', $data);
 	}
-
 
 }

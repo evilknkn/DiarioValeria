@@ -8,6 +8,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
+    <meta name="author" content="Valeria Martell">
+    <meta name="copyright" content="&copy; 2015 Valeria Martell.">
+    <meta name="keywords" content="erótica,scort,blog,">
+
     <link rel="icon" type="image/png" href="<?php echo base_url()?>assets/favicon.png" />
     <title>Mi diario erótico</title>
 
@@ -23,6 +27,7 @@
     <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Great+Vibes">
     <link href="<?=base_url('assets')?>/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <?php $this->load->view('include/analyticstracking')?>
+    <link href="<?php echo base_url()?>assets/css/bootstrap-social.css" rel="stylesheet" >
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>

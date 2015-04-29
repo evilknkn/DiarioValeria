@@ -1,0 +1,210 @@
+{{-- Informacióin tipo lectura, se muestra si ya se ha creado el usuario RH--}}
+@if($exit_usuario == 1)
+	<div class="row form-horizontal" id="datos-default">
+		<div class="form-group">
+			<label class="col-sm-5 control-label"  > <b>Nombre</b> </label>
+			<label style="padding-top:5px" class="col-sm-5">{{$usuarioRh->nombre_usuario}}</label>
+			
+		</div>
+		<div class="form-group">
+			<label class="col-sm-5 control-label" > <b>Correo</b> </label>
+			<label style="padding-top:5px" class="col-sm-5">{{$usuarioRh->correo}}</label>
+		</div>
+		<div class="form-group">
+			<label class="col-sm-5 control-label"  > <b>Cargo</b> </label>
+			<label style="padding-top:5px" class="col-sm-5">{{$usuarioRh->cargo}}</label>
+		</div>
+		<div class="clearfix col-sm-offset-5">
+			<div class="col-sm-5">
+				<a class="btn btn-info" id="editar-datos"> Editar </a>
+			</div>
+		</div>
+	</div>
+
+	<div class="row" style="display:none" id="active-editar-datos">	
+		<form class="form-horizontal" method="post" action="/dashboard/editarUsuarioRh/{{$id_empresa}}">
+			
+			<div class="form-group">
+				<label class="col-sm-5 control-label"> <b> Nombre </b> </label>
+				<div class="col-sm-5">
+					<input type="hidden" value="{{$id_empresa}}" name="id_empresa">
+					<input type="text" class="form-control"  name="nombre_usuario"  value="{{$usuarioRh->nombre_usuario}}" required> 
+					</br>
+					@if($errors->has('nombre_usuario'))
+						@foreach($errors->get('nombre_usuario') as $error )
+			                <label class="error" style="" id="fail-plan">* {{ $error }}</label>
+			            @endforeach
+					@endif
+				</div>
+				
+			</div>
+			<div class="form-group">
+				<label class="col-sm-5 control-label" > <b> Correo </b> </label>
+				<div class="col-sm-5">
+					<input type="email" class="form-control"  name="correo"  value="{{$usuarioRh->correo}}" required>
+					</br>
+					@if($errors->has('correo'))
+						@foreach($errors->get('correo') as $error )
+			                <label class="error" style="" id="fail-plan">* {{ $error }}</label>
+			            @endforeach
+					@endif
+				</div>
+			</div>
+
+			<div class="form-group">
+				<label class="col-sm-5 control-label"  > <b> Cargo </b> </label>
+				<div class="col-sm-5 text-left">
+					<input type="text" class="form-control"  name="cargo"  value="{{$usuarioRh->cargo}}" required>
+					</br>
+					@if($errors->has('cargo'))
+						@foreach($errors->get('cargo') as $error )
+			                <label class="error" style="" id="fail-plan">* {{ $error }}</label>
+			            @endforeach
+					@endif
+				</div>
+				
+			</div>
+		
+			<div class="clearfix col-sm-offset-5">
+			<div class="col-sm-5">
+				<button type="submit" class="btn btn-primary " id=""> Guardar </button>
+			</div>
+			<div class="col-sm-5 text-right">
+{{-- 			<a class="btn btn-default" id="cancelar-editar" style="margin-left:10px"> Cancelar </a>
+ --}}			</div>
+		</form>
+	</div>
+
+	
+@else
+<div class="row">	
+	<form class="form-horizontal" method="post">
+		<div class="form-group">
+			<label class="col-md-5 control-label"  > Nombre </label>
+			<div class="col-md-6">
+				<input type="text" class="form-control"  name="nombre_usuario"  value="{{ Input::old('nombre_usuario')}}" > 
+				</br>
+				@if($errors->has('nombre_usuario'))
+					@foreach($errors->get('nombre_usuario') as $error )
+		                <label class="error" style="" id="fail-plan">* {{ $error }}</label>
+		            @endforeach
+				@endif
+			</div>
+			
+		</div>
+		<div class="form-group">
+			<label class="col-md-5 control-label" > Correo </label>
+			<div class="col-md-6">
+				<input type="email" class="form-control"  name="correo"  value="{{ Input::old('correo')}}" >
+				</br>
+				@if($errors->has('correo'))
+					@foreach($errors->get('correo') as $error )
+		                <label class="error" style="" id="fail-plan">* {{ $error }}</label>
+		            @endforeach
+				@endif
+			</div>
+			
+		</div>
+		<div class="form-group">
+			<label class="col-md-5 control-label"  > Cargo </label>
+			<div class="col-md-6">
+				<input type="text" class="form-control"  name="cargo"  value="{{ Input::old('cargo')}}" >
+				</br>
+				@if($errors->has('cargo'))
+					@foreach($errors->get('cargo') as $error )
+		                <label class="error" style="" id="fail-plan">* {{ $error }}</label>
+		            @endforeach
+				@endif
+			</div>
+			
+		</div>
+		<div class="form-group">
+			<label class="col-md-5 control-label" for="profileNewPassword">Contraseña </label>
+			<div class="col-md-6">
+				<input type="password" name="password" class="form-control" id="profileNewPassword">
+				<br>
+				@if($errors->has('password'))
+					@foreach($errors->get('password') as $error )
+		                <label class="error" style="" id="fail-plan">* {{ $error }}</label>
+		            @endforeach
+				@endif
+			</div>
+			
+		</div>
+
+		<div class="form-group">
+			<label class="col-md-5 control-label" for="profileNewPassword"> Confirmar contraseña</label>
+			<div class="col-md-6">
+				<input type="password" name="password_confirmation" class="form-control" id="profileNewPassword">
+				<br>
+				@if($errors->has('password_confirmation'))
+					@foreach($errors->get('password_confirmation') as $error )
+		                <label class="error" style="" id="fail-plan">* {{ $error }}</label>
+		            @endforeach
+				@endif
+			</div>
+			
+		</div>
+		<div class="text-center">
+		<button type="submit" class="btn btn-primary" id=""> Guardar </button>
+		</div>
+	</form>
+</div>
+@endif
+{{-- Cambio de contraseña una vez que ya fue creado el usuario RH--}}
+@if($exit_usuario == 1)
+	<hr class="dotted tall">
+
+	<div class="row">
+
+		<form class="form-horizontal" method="post" action="/dashboard/cambiarPasswordRh/{{$id_empresa}}">
+			
+			<div class="form-group">
+				<label class="col-sm-5 control-label" for="profileNewPassword">Contraseña nueva</label>
+				<div class="col-sm-5">
+					<input type="password" name="newPassword" class="form-control" id="profileNewPassword">
+					<br>
+				@if($errors->has('newPassword'))
+					@foreach($errors->get('newPassword') as $error )
+		                <label class="error" style="" id="fail-plan">* {{ $error }}</label>
+		            @endforeach
+				@endif
+				</div>
+				
+			</div>
+
+			<div class="form-group">
+				<label class="col-sm-5 control-label" for="profileNewPassword"> Confirmar contraseña</label>
+				<div class="col-sm-5">
+					<input type="password" name="password_confirmation" class="form-control" id="profileNewPassword">
+					<br>
+					@if($errors->has('password_confirmation'))
+						@foreach($errors->get('password_confirmation') as $error )
+			                <label class="error" style="" id="fail-plan">* {{ $error }}</label>
+			            @endforeach
+					@endif
+				</div>
+				
+			</div>
+			<div class="clearfix col-sm-offset-5" >
+				<div class="col-sm-5">
+					<button type="submit" class="btn btn-primary">Guardar</button>
+				</div>
+			 
+			</div>
+		</form>
+	</div>
+@endif
+
+<script type="text/javascript">
+	$('#editar-datos').click(function(){
+			$('#datos-default').hide();
+			$('#active-editar-datos').show();
+		});
+	$('#cancelar-editar').click(function(){
+		$('#datos-default').show();
+		$('#active-editar-datos').hide();
+	});
+</script>
+
+

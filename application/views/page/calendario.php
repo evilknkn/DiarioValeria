@@ -1,97 +1,26 @@
-<link href='<?php echo base_url()?>assets/calendar/fullcalendar.css' rel='stylesheet' />
-<link href='<?php echo base_url()?>assets/calendar/fullcalendar.print.css' rel='stylesheet' media='print' />
-<script src='<?php echo base_url()?>assets/calendar/lib/moment.min.js'></script>
-<script src='<?php echo base_url()?>assets/calendar/lib/jquery.min.js'></script>
-<script src='<?php echo base_url()?>assets/calendar/fullcalendar.min.js'></script>
 
-<script>
+<div class="box">
+    <div class="col-lg-12">
+        <hr>
+        <h2 class="intro-text text-center">
+            <strong>Valeria Martell</strong> en tu ciudad
+        </h2>
+        <hr>
+    </div>
 
-	$(document).ready(function() {
-		
-		$('#calendar').fullCalendar({
-			header: {
-				left: 'prev,next today',
-				center: 'title',
-				right: 'month,basicWeek,basicDay'
-			},
-			defaultDate: '2015-02-12',
-			editable: true,
-			eventLimit: true, // allow "more" link when too many events
-			events: [
-				{
-					title: 'All Day Event',
-					start: '2015-02-01'
-				},
-				{
-					title: 'Long Event',
-					start: '2015-02-07',
-					end: '2015-02-10'
-				},
-				{
-					id: 999,
-					title: 'Repeating Event',
-					start: '2015-02-09T16:00:00'
-				},
-				{
-					id: 999,
-					title: 'Repeating Event',
-					start: '2015-02-16T16:00:00'
-				},
-				{
-					title: 'Conference',
-					start: '2015-02-11',
-					end: '2015-02-13'
-				},
-				{
-					title: 'Meeting',
-					start: '2015-02-12T10:30:00',
-					end: '2015-02-12T12:30:00'
-				},
-				{
-					title: 'Lunch',
-					start: '2015-02-12T12:00:00'
-				},
-				{
-					title: 'Meeting',
-					start: '2015-02-12T14:30:00'
-				},
-				{
-					title: 'Happy Hour',
-					start: '2015-02-12T17:30:00'
-				},
-				{
-					title: 'Dinner',
-					start: '2015-02-12T20:00:00'
-				},
-				{
-					title: 'Birthday Party',
-					start: '2015-02-13T07:00:00'
-				},
-				{
-					title: 'Click for Google',
-					url: 'http://google.com/',
-					start: '2015-02-28'
-				}
-			]
-		});
-		
-	});
+   <p>Después de tanto pensarlo, comenzaré a visitar algunas ciudades en este PRIMER GRAN TOUR 2015, 
+   	a continuación mencionare las ciudades que visitare y que será por UN DÍA, comprenderán que mis 
+   	otras actividades también tienen la misma importancia que el poder complacerlos en la intimidad.</p>
+    <p class="hidden-lg hidden-sm hidden-md"> <strong>PACHUCA</strong> 30 DE ABRIL</p>
+    <p class="hidden-lg hidden-sm hidden-md"> <strong>PUEBLA</strong> 08 DE MAYO</p>
+    <p class="hidden-lg hidden-sm hidden-md"> <strong>TOLUCA</strong> 15 DE MAYO</p>
+    <p class="hidden-lg hidden-sm hidden-md"> <strong>QUERÉTARO</strong> 22 DE MAYO</p>
+    <p class="hidden-lg hidden-sm hidden-md"> <strong>CUERNAVACA</strong> 29 DE MAYO</p>
+   
+    <div class="col-lg-8 col-lg-offset-2 hidden-xs">
+    	<iframe src="https://www.google.com/calendar/embed?src=contacto.valeriamartell%40gmail.com&ctz=America/Mexico_City" style="border: 0" width="100%" height="400" frameborder="0" scrolling="no"></iframe>
+	  </div>
 
-</script>
-<style>
+   
 
-	body {
-		margin: 40px 10px;
-		padding: 0;
-		font-family: "Lucida Grande",Helvetica,Arial,Verdana,sans-serif;
-		font-size: 14px;
-	}
-
-	#calendar {
-		max-width: 900px;
-		margin: 0 auto;
-	}
-
-</style>
-
-	<div id='calendar'></div>
+</div>
