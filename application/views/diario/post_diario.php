@@ -19,20 +19,20 @@
                         </a>
                     </div>
 
-                    <div class="col-lg-1 hidden-xs hidden-sm">
+                    <!-- <div class="col-lg-1 hidden-xs hidden-sm">
                         <a class="btn btn-social-icon btn-facebook" href="http://www.facebook.com/sharer.php?u=<?=urlencode(base_url('blog/post/'.$post->short_title))?>">
                             <i class="fa fa-facebook"></i>
                         </a> 
-                    </div>
+                    </div> -->
 
                     <div class="col-xs-12 text-center hidden-md hidden-lg">
                         <a class="btn btn-social-icon btn-twitter" href="http://twitter.com/home?status=<?=urlencode($post->titulo.' '.base_url('blog/post/'.$post->short_title))?>" >
                             <i class="fa fa-twitter"></i>
                         </a>
 
-                        <a class="btn btn-social-icon btn-facebook" href="http://www.facebook.com/sharer.php?u=<?=urlencode(base_url('blog/post/'.$post->short_title))?>">
+                        <!-- <a class="btn btn-social-icon btn-facebook" href="http://www.facebook.com/sharer.php?u=<?=urlencode(base_url('blog/post/'.$post->short_title))?>">
                             <i class="fa fa-facebook"></i>
-                        </a> 
+                        </a>  -->
                     </div>
 
                 </div>
@@ -51,20 +51,20 @@
                         </a>
                     </div>
 
-                    <div class="col-lg-1 hidden-xs hidden-sm">
+                   <!--  <div class="col-lg-1 hidden-xs hidden-sm">
                         <a class="btn btn-social-icon btn-facebook" href="http://www.facebook.com/sharer.php?u=<?=urlencode(base_url('blog/post/'.$post->short_title))?>">
                             <i class="fa fa-facebook"></i>
                         </a> 
-                    </div>
+                    </div> -->
 
                     <div class="col-xs-12 text-center hidden-md hidden-lg">
                         <a class="btn btn-social-icon btn-twitter" href="http://twitter.com/home?status=<?=urlencode($post->titulo.' '.base_url('blog/post/'.$post->short_title))?>" >
                             <i class="fa fa-twitter"></i>
                         </a>
 
-                        <a class="btn btn-social-icon btn-facebook" href="http://www.facebook.com/sharer.php?u=<?=urlencode(base_url('blog/post/'.$post->short_title))?>">
+                        <!-- <a class="btn btn-social-icon btn-facebook" href="http://www.facebook.com/sharer.php?u=<?=urlencode(base_url('blog/post/'.$post->short_title))?>">
                             <i class="fa fa-facebook"></i>
-                        </a> 
+                        </a>  -->
                     </div>
 
                 </div>

@@ -6,11 +6,22 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
+    <meta name="description" content="Atrevete a conocerme y ser parte de tu fantasia">
+    
     <meta name="author" content="Valeria Martell">
     <meta name="copyright" content="&copy; 2015 Valeria Martell.">
-    <meta name="keywords" content="erótica,scort,blog,">
+    <meta name="keywords" content="erótica,scort,blog,sexy,cachondo">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="robots" content="all" />
+    <meta http-equiv="content-language" content="es" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <meta property="og:title" content="Mi diario erótico" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="http://midiarioerotico.com.mx/" />
+    <meta property="og:image" content="http://midiarioerotico.com.mx/assets/mi_diario_erotico.png" />
+    <meta property="og:site_name" content="Mi diario erótico" />
+    <meta property="og:description" content="Atrevete a conocerme y ser parte de tu fantasia">
 
     <link rel="icon" type="image/png" href="<?php echo base_url()?>assets/favicon.png" />
     <title>Mi diario erótico</title>
